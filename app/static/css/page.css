@@ -44,6 +44,24 @@ p {
   line-height: 1.25;
 }
 
-.card:hover {
+.card:hover,
+#button:hover {
   background-color: rgba(39, 141, 164, 0.8);
+}
+
+.panel {
+	padding-top: 250px;
+	margin: 0 auto;
+}
+
+#button {
+	display: inline-block;
+	padding: 2.5em 2em;
+	border: 1px solid #e1e1e1;
+	border-radius: 0.25em;
+	cursor: pointer;
+	color: #278da4;
+	margin: 0.35em 0 0;
+	line-height: 1.25;
+	width: 200px;
 }

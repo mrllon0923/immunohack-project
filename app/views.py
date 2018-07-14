@@ -25,6 +25,12 @@ class DetailsView(generics.RetrieveUpdateDestroyAPIView):
 def start(request):
     return render(request, 'start.html')
 
+def patient(request):
+    return render(request, 'patient.html')
+
+def provider(request):
+    return render(request, 'provider.html')
+
 def age_groups(request):
     groups = AgeGroup.objects.all()
     return render(request, 'age_groups.html', {'groups': groups})

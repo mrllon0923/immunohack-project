@@ -7,6 +7,8 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     url(r'^$', views.start, name='start.html'),
+    url(r'^patient/$', views.patient, name='patient'),
+    url(r'^provider/$', views.provider, name='provider'),
     url(r'^group/$', views.age_groups, name='age_groups'),
     url(r'^vaccinelists/$', CreateView.as_view(), name="create"),
     url(r'^vaccinelists/(?P<pk>[0-9]+)/$', DetailsView.as_view(), name="details"),
