@@ -1,0 +1,49 @@
+/* =====================================
+   Page Styles
+======================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+	font-family: 'Raleway', sans-serif;
+  text-align: center;
+  margin: 0;
+}
+
+a {
+  color: #278da4;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: 'Bree Serif', serif;
+}
+
+p {
+  margin-bottom: 1.25em;
+}
+
+.main-content {
+  margin: 2em auto;
+}
+
+.card {
+  padding: 2.5em 2em;
+  border: 1px solid #e1e1e1;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+
+.card h1 {
+  color: #278da4;
+  margin: 0.35em 0 0;
+  line-height: 1.25;
+}
+
+.card:hover {
+  background-color: rgba(39, 141, 164, 0.8);
+}
