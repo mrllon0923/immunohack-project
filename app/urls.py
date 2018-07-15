@@ -6,7 +6,8 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 
 urlpatterns = [
-    url(r'^$', views.start, name='start.html'),
+    url(r'^$', views.start, name='start'),
+    url(r'^cat/$', views.cat, name='cat'),
     url(r'^patient/$', views.patient, name='patient'),
     url(r'^provider/$', views.provider, name='provider'),
     url(r'^group/$', views.age_groups, name='age_groups'),

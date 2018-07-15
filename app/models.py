@@ -2,6 +2,51 @@ from django.db import models
 from django.urls import reverse
 
 
+PATIENT_CLASS = [
+    ('mom', 'Mom'),
+    ('dad', 'Dad'),
+    ('single', 'Single'),
+    ('caretaker', 'Caretaker'),
+]
+
+GENDER = [
+    ('female', 'Female'),
+    ('male', 'Male'),
+]
+
+CAL = [
+    ('google', 'Google Calendar'),
+    ('apple', 'Apple Calendar'),
+    ('outlook', 'Outlook Calendar'),
+    ('desk', 'Desk Calendar'),
+]
+
+FEELS = [
+    ('trust',"I trust my doctor will make the decisions that are of best interest to me."),
+    ('opinions', "I have opinions on the matter and would like to learn more about vaccinations."),
+    ('oppose', "I am opposed to how often vaccines are administered and would like more information."),
+    ('none', "I am not interested in vaccinating my child, myself, my parent."),
+]
+
+class PatientEnroll(models.Model):
+    name = models.CharField(max_length=200)
+    email = models.CharField(max_length=200)
+    age = models.PositiveIntegerField()
+    gender = models.CharField(max_length=20, choices=GENDER)
+    preg = models.BooleanField(name="Are you pregnant or planning to be pregnant?")
+    p_class = models.CharField(max_length=20, choices=PATIENT_CLASS, name="Please select from the following:")
+    calendar = models.CharField(max_length=20, choices=CAL, name="What calendar do you currently use?")
+    schedule = models.BooleanField(name="May we import your schedule?")
+    location = models.BooleanField(name="May we track your location?")
+    feelings = models.TextField(max_length=200, choices=FEELS, name="How do you feel about vaccines?")
+    info = models.BooleanField(name="Would you like more info about vaccines?")
+    learning = models.CharField(max_length=500, name="How would you like to learn more about vaccines?")
+    advocacy = models.BooleanField(name="Would you be interested in taking part in advocacy?")
+
+
+class ProviderEnroll(models.Model):
+    pass
+
 class VaccineList(models.Model):
     name = models.CharField(max_length=255, blank=False, unique=True)
     date_created = models.DateTimeField(auto_now_add=True)

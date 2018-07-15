@@ -2,7 +2,8 @@ from django.shortcuts import render
 from .models import AgeGroup
 from rest_framework import generics
 from .serializers import VaccineListSerializer
-from .models import VaccineList
+from .models import VaccineList, PatientEnroll
+from .forms import PatientForm
 
 
 class CreateView(generics.ListCreateAPIView):
@@ -25,8 +26,19 @@ class DetailsView(generics.RetrieveUpdateDestroyAPIView):
 def start(request):
     return render(request, 'start.html')
 
+def cat(request):
+    return render(request, 'cat.html')
+
 def patient(request):
-    return render(request, 'patient.html')
+    form = PatientForm()
+    if request.method == "POST":
+        form = PatientForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('patient')
+    else:
+        PatientForm()
+    return render(request, 'patient.html', {'form': form})
 
 def provider(request):
     return render(request, 'provider.html')

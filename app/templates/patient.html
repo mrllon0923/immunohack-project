@@ -1,6 +1,26 @@
 {% load staticfiles %}
-
+{% load widget_tweaks %}
 
 <html>
-    <p>Patient</p>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bree+Serif|Raleway">
+    <link rel="stylesheet" href="{% static 'css/page.css' %}" >
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+</head>
+<div class="form">
+  <h1>Please fill out this form to start your journey</h1>
+  <form method="POST" class="post-form">
+    {% csrf_token %}
+
+    <div class="form-field">
+      {% for field in form.visible_fields %}
+        {{ field.label_tag }}
+        {% render_field field class="form-control" %}
+      {% endfor %}
+    <input type="submit" value="Submit"/>
+</form>
 </html>
