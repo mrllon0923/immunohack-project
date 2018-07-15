@@ -35,13 +35,19 @@ def patient(request):
         form = PatientForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('patient')
+            return redirect('schedule_prompt.html')
     else:
         PatientForm()
     return render(request, 'patient.html', {'form': form})
 
+def schedule_prompt(request):
+    return render(request, 'schedule_prompt.html')
+
 def provider(request):
     return render(request, 'provider.html')
+
+def home(request):
+    return render(request, 'home.html')
 
 def age_groups(request):
     groups = AgeGroup.objects.all()
