@@ -25,7 +25,7 @@ SECRET_KEY = 'p6uo^%^c-5*swwhe!gf6mg)*-$9wzs$lrgybup5&cs01bv+$#d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com', '.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com', '.herokuapp.com', '*']
 
 
 # Application definition
@@ -126,6 +126,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+STATICFILES_STORAGE='whitenoise.django.GzipManifestStaticFilesStorage'
 
 # Django REST
 
