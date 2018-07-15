@@ -104,6 +104,14 @@ Form Layout Styles
 	padding-top: 25px;
 	padding-bottom: 25px;
 }
+.purplecontainer {
+	position: relative;
+}
+.purpleimg{
+	position: absolute;
+	bottom: 10px;
+	width: 120px;
+}
 ul {
 	list-style-type: none;
 	padding-left: 0px;

@@ -32,6 +32,9 @@ def badges(request):
 def cat(request):
     return render(request, 'cat.html')
 
+def header(request):
+    return render(request, 'header.html')
+
 def patient(request):
     form = PatientForm()
     if request.method == "POST":

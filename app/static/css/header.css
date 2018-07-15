@@ -1,0 +1,26 @@
+header {
+  position: relative;
+  background-color: #49B68C;
+}
+h1 {
+  margin-top: 0px;
+}
+
+.header-content {
+  position: absolute;
+  bottom: 2px;
+  right: 50px;
+  margin-bottom: 0px;
+}
+.middle {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.side-nav {
+  display: inline-block;
+}
+.site-name {
+  padding-top: 10px;
+  padding-left: 25px;
+  margin-bottom: 5px;
+}
