@@ -33,15 +33,16 @@ class PatientEnroll(models.Model):
     email = models.CharField(max_length=200)
     age = models.PositiveIntegerField()
     gender = models.CharField(max_length=20, choices=GENDER)
-    preg = models.BooleanField(name="Are you pregnant or planning to be pregnant?")
-    p_class = models.CharField(max_length=20, choices=PATIENT_CLASS, name="Please select from the following:")
-    calendar = models.CharField(max_length=20, choices=CAL, name="What calendar do you currently use?")
-    schedule = models.BooleanField(name="May we import your schedule?")
-    location = models.BooleanField(name="May we track your location?")
-    feelings = models.TextField(max_length=200, choices=FEELS, name="How do you feel about vaccines?")
-    info = models.BooleanField(name="Would you like more info about vaccines?")
-    learning = models.CharField(max_length=500, name="How would you like to learn more about vaccines?")
-    advocacy = models.BooleanField(name="Would you be interested in taking part in advocacy?")
+    preg = models.BooleanField()
+    p_class = models.CharField(max_length=20, choices=PATIENT_CLASS)
+    calendar = models.CharField(max_length=20, choices=CAL)
+    schedule = models.BooleanField()
+    location = models.BooleanField()
+    feelings = models.TextField(max_length=200, choices=FEELS)
+    info = models.BooleanField()
+    learning = models.CharField(max_length=500)
+    advocacy = models.BooleanField()
+
 
 
 class ProviderEnroll(models.Model):

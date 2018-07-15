@@ -26,6 +26,9 @@ class DetailsView(generics.RetrieveUpdateDestroyAPIView):
 def start(request):
     return render(request, 'start.html')
 
+def badges(request):
+    return render(request, 'badges.html')
+
 def cat(request):
     return render(request, 'cat.html')
 

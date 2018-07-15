@@ -1,0 +1,198 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<style media="screen">
+  img {
+    width: 100px;
+    height: 100px;
+  }
+  p {
+    margin-bottom: 0px;
+  }
+  .badge-fun {
+    font-size: 10px;
+  }
+  .badge-image {
+    text-align: center;
+    padding-top: 10px;
+  }
+  .badge-inf{
+    font-size: 8px;
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .badge-name {
+    font-size: 10px;
+  }
+  .badge-title {
+    text-align: center;
+  }
+  .bar {
+    background-color: #04d9ff;
+    font-size: 10px;
+  }
+  .bd-highlight{
+    position: relative;
+    border-style: solid;
+    height: 195px;
+    width: 134px;
+    border-width: 2px;
+    margin-left: 2px;
+    margin-top: 2px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+  }
+  .bd-highlight:hover {
+    box-shadow: 0 0 25px rgba(86,86,86,1);
+  }
+  .info-box:hover{
+    opacity: 1;
+    height: 176px;
+    width: 115px;
+    background-color: white;
+  }
+  .info-title {
+    background-color: teal;
+    padding-left: 2px;
+    padding-right: 2px;
+    color: white;
+  }
+  .small-text {
+    font-size: 8px;
+  }
+  .date-text {
+    font-size: 10px;
+  }
+  .info-box {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+  }
+  .readlink {
+    color: teal;
+  }
+  .wthis {
+    padding-top: 25px;
+  }
+</style>
+  <head>
+    <meta charset="utf-8">
+    <title>Badges</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="d-flex align-items-stretch">
+          <div class="p-2 bd-highlight">
+            Vaccine Badge
+            <br>
+            <div class="badge-image">
+              <img src="{% static "img/poring.jpg" %}" alt="">
+              <p>Completed</p>
+              <p>9/23/17</p>
+            </div>
+            <div class="info-box">
+              Vaccine Badge
+              <p class="badge-inf">This vaccine does this and it prevents this</p>
+              <p class="badge-fun">Fun Fact: <i>"This is a fun fact"</i></p>
+            </div>
+          </div>
+          <div class="p-2 bd-highlight">
+            Vaccine Badge
+            <br>
+            <div class="badge-image">
+              <img src="{% static "img/slime.png" %}" alt="" class="img-responsive">
+              <p>Completed</p>
+              <p>11/28/17</p>
+            </div>
+          </div>
+          <div class="p-2 bd-highlight">
+            Vaccine Badge
+            <br>
+            <div class="badge-image">
+              <img src="{% static "img/ribbon.jpeg" %}" alt="">
+              <p>Completed</p>
+              <p>3/7/18</p>
+            </div>
+          </div>
+      </div>
+      <div class="d-flex align-items-stretch">
+          <div class="p-2 bd-highlight">
+            Vaccine Badge
+            <br>
+            <div class="badge-image">
+              <img src="{% static "img/blue-org.jpg" %}" alt="">
+              <p>Completed</p>
+              <p>4/28/18</p>
+            </div>
+            <div class="info-box">
+              Vaccine Badge
+              <p class="badge-inf">This vaccine does this and it prevents this</p>
+              <p class="badge-fun">Fun Fact: <i>"This is a fun fact"</i></p>
+            </div>
+          </div>
+          <div class="p-2 bd-highlight">
+            Vaccine Badge
+            <br>
+            <div class="badge-image">
+              <img src="{% static "img/green-org.jpeg" %}" alt="" class="img-responsive">
+              <p>Completed</p>
+              <p>5/16/18</p>
+            </div>
+          </div>
+          <div class="p-2 bd-highlight">
+            Vaccine Badge
+            <br>
+            <div class="badge-image">
+              <img src="{% static "img/gunter.jpg" %}" alt="">
+              <p>Completed</p>
+              <p>7/10/18</p>
+            </div>
+          </div>
+      </div>
+      <div class="d-flex align-items-stretch">
+        <div class="p-2 bd-highlight text-center">
+          Vaccine Badge
+          <br>
+          <div class="badge-image">
+            <img src="{% static "img/locked.png" %}" alt="">
+          </div>
+          <p class="small-text">2 of 3</p>
+          <div class="w3-light-grey w3-round">
+            <div class="w3-container w3-round bar" style="width:66%">66%</div>
+          </div>
+          <p class="small-text">next appointment</p>
+          <p class="date-text">8/24/18</p>
+        </div>
+        <div class="p-2 bd-highlight">
+          <p class="badge-title">Hepatitis B</p>
+          <div class="badge-image">
+          <img src="{% static "img/locked.png" %}" alt="">
+          <p class="wthis">What's this?</p>
+          <div class="info-box">
+            <p>Hepatitis B</p>
+            <p class="badge-inf">Hepatitis is an inflammation of the liver. Hepatitis B spreads by contact with an infected person's blood, semen, or other body fluid. <a class="readlink" href="">Read More</a></p>
+            <p class="badge-fun">Fun Fact: <i>"The word influenza is the Italian word for "influence." ..."</i></p>
+          </div>
+        </div>
+        </div>
+        <div class="p-2 bd-highlight">
+          Vaccine Badge
+          <br>
+          <div class="badge-image">
+          <img src="{% static "img/locked.png" %}" alt="">
+          <p class="wthis">What's this?</p>
+        </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

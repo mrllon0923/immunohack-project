@@ -15,11 +15,103 @@
 </head>
 
 <form method="post" novalidate class="form">
-  <h>Please fill out this form to start your journey to better health</h>
-  {% csrf_token %}
-    <div class="form-group">
-      <label>Name: </label>
-      {{ form.name }}
-    </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <div class="container">
+    <h4 class="patient-form-h">Please fill out this form to start your journey to better health</h4>
+    {% csrf_token %}
+      <div class="form-group">
+        <div class="row">
+
+
+          <div class="col-md-8">
+            <ul>
+              <li>
+                <label class="nea">Name </label>
+                {{ form.name }}
+              </li>
+              <li>
+                <label class="nea">Email </label>
+                {{ form.email }}
+              </li>
+              <li>
+                <label class="nea">Age </label>
+                {{ form.age }}
+              </li>
+              <li>
+                <label>Gender </label>
+                {{ form.gender }}
+              </li>
+              <li>
+                <label>Are you pregnant?</label>
+                {{ form.preg }}
+              </li>
+              <li>
+                <label>Please select from the following: </label>
+                {{ form.p_class }}
+              </li>
+              <li>
+                <label>What calendar do you currently use?</label>
+              </li>
+              <li>
+                {{ form.calendar }}
+              </li>
+              <li>
+                <label>May we import your schedule?</label>
+                {{ form.schedule }}
+              </li>
+              <li>
+                <label>May we track your location?</label>
+                {{ form.location }}
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <img class="brain" src="{% static "img/face-cell.png" %}" alt="Brain image"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <ul>
+              <li>
+                <label>How do you feel about vaccines?</label>
+                {{ form.feelings }}
+              </li>
+              <li>
+                <label>Would you like more info about vaccines?</label>
+                {{ form.info }}
+              </li>
+              <li>
+                <label>How would you like to learn about vaccines?</label>
+              </li>
+              <div class="container">
+                <label>Email
+                  <input type="checkbox" checked="checked" value="email">
+                  <span class="checkmark"></span>
+                </label>
+                <label>Text
+                  <input type="checkbox" value="text">
+                  <span class="checkmark"></span>
+                </label>
+                <label>Subscription Service
+                  <input type="checkbox"  value="subscription">
+                  <span class="checkmark"></span>
+                </label>
+                <label>Physical Content
+                  <input type="checkbox" value="physical">
+                  <span class="checkmark"></span>
+                </label>
+                <label>Friend Connect
+                  <input type="checkbox" value="friends">
+                  <span class="checkmark"></span>
+                </label>                
+              </div>
+              <li>
+                <label>Would you be interested in taking part in advocacy?</label>
+                {{ form.advocacy }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</div>
 </html>

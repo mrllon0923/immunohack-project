@@ -80,6 +80,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'immunodb',
+        'PORT': '5434'
     }
 }
 

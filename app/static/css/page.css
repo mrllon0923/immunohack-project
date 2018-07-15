@@ -83,7 +83,10 @@ Form Layout Styles
 .form-control input[type=checkbox] {
 	text-align: left;
 }
-
+.brain {
+	width: 450px;
+	height: 330px;
+}
 .btn {
 	border: 1px solid #e1e1e1;
 	color: #278da4;
@@ -92,4 +95,16 @@ Form Layout Styles
 
 .btn:hover {
 	background-color: rgba(39, 141, 164, 0.8);
+}
+
+.nea {
+	width: 45px;
+}
+.patient-form-h{
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+ul {
+	list-style-type: none;
+	padding-left: 0px;
 }
