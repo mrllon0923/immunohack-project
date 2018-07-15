@@ -25,7 +25,7 @@ FEELS = [
     ('trust',"I trust my doctor will make the decisions that are of best interest to me."),
     ('opinions', "I have opinions on the matter and would like to learn more about vaccinations."),
     ('oppose', "I am opposed to how often vaccines are administered and would like more information."),
-    ('none', "I am not interested in vaccinating my child, myself, my parent."),
+    ('none', "I am not interested in vaccinating my child, myself, or my parent."),
 ]
 
 class PatientEnroll(models.Model):

@@ -71,64 +71,25 @@ Form Layout Styles
 ==================================== */
 
 .form {
-  color: #348ba8;
+	color: #278da4;
+	font-weight: bold;
 }
 
-.form-field {
-    margin: 10px auto;
-    padding: 0px 12px 10px 20px;
-    max-width: 400px;
+.form-group {
+	text-align: left;
+	font-weight: bold;
 }
 
-.form-field input[type=name],
-.form-field input[type=email],
-.form-field input[type=age],
-.form-field input[type=gender],
-textarea {
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-transition: all 0.30s ease-in-out;
-    -moz-transition: all 0.30s ease-in-out;
-    -ms-transition: all 0.30s ease-in-out;
-    -o-transition: all 0.30s ease-in-out;
-    outline: none;
-    margin: 5px;
-    padding: 7px;
-    border:1px solid #BEBEBE;
+.form-control input[type=checkbox] {
+	text-align: left;
 }
 
-.form-field input[type=name]:focus,
-.form-field input[type=email]:focus,
-.form-field input[type=age]:focus,
-.form-field input[type=gender]:focus {
-    -moz-box-shadow: 0 0 8px #88D5E9;
-    -webkit-box-shadow: 0 0 8px #88D5E9;
-    box-shadow: 0 0 8px #88D5E9;
-    border: 1px solid #88D5E9;
+.btn {
+	border: 1px solid #e1e1e1;
+	color: #278da4;
+	background: #fff;
 }
 
-label[for=id_name],
-label[for=id_email],
-label[for=id_age] {
-  margin: 5px;
-}
-
-#submit {
-    background: #4B99AD;
-    color: #fff;
-    border: none;
-    margin: 5px;
-    padding: 8px 15px 8px 15px;
-}
-
-#submit:hover {
-    background: #4691A4;
-    box-shadow:none;
-    -moz-box-shadow:none;
-    -webkit-box-shadow:none;
-}
-
-.form-field .required {
-    color:red;
+.btn:hover {
+	background-color: rgba(39, 141, 164, 0.8);
 }

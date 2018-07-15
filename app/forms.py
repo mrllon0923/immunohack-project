@@ -17,4 +17,3 @@ class PatientForm(forms.ModelForm):
         self.fields['email'].label = "Email"
         self.fields['age'].label = "Age"
         self.fields['gender'].label = "Gender"
-        self.fields['preg'].label = ""
